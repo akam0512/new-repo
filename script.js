@@ -8,7 +8,7 @@ function addSubject() {
   newSubject.innerHTML = `
     <input type="text" placeholder="Subject Name" required>
     <input type="number" step="0.01" placeholder="Marks (0-100)" min="0" max="100" required>
-    <input type="number" step="1" placeholder="Credits" min="1" required>
+    <input type="number" step="1" placeholder="Credits" min="1" max="10" required>
   `;
   subjectsDiv.appendChild(newSubject);
 }
