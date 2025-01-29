@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SGPA/CGPA Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <video autoplay muted loop id="bg-video">
+    <source src="30up.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+  <div class="container">
+    <h1>SGPA/CGPA Calculator</h1>
+    <form id="cgpaForm">
+      <div id="subjects">
+        <div class="subject">
+          <input type="text" placeholder="Subject Name" required>
+          <input type="number" step="0.01" placeholder="Marks (0-100)" min="0" max="100" required>
+          <input type="number" step="1" placeholder="Credits" min="1" required>
+        </div>
+      </div>
+      <button type="button" onclick="addSubject()">Add Subject</button>
+      <button type="submit">Calculate SGPA/CGPA</button>
+    </form>
+    <div id="result">
+      <h2>Your SGPA: <span id="sgpaValue">0.00</span></h2>
+      <h2>Your CGPA: <span id="cgpaValue">0.00</span></h2>
+      <table id="gradeTable">
+        <thead>
+          <tr>
+            <th>Subject</th>
+            <th>Grade Point</th>
+            <th>Grade</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+    <div class="chart-container">
+      <canvas id="cgpaChart"></canvas>
+    </div>
+  </div>
+  <footer>
+    <p>&copy; 2025 SGPA/CGPA Calculator. All rights reserved.</p>
+    <p>Designed and Crafted with ❤️ by Akanksha Mishra</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
